@@ -1,8 +1,7 @@
+##Shell script to clear the cache of the Linux Shell
 #!/bin/bash
-#service jenkins stop
-#service jenkins start
-#echo "Jenkins is up and running"
-#sleep 3s 
-echo "Clearing cache"
-sync; echo 3 > /proc/sys/vm/drop_caches
+ set -xv
+ sync; echo 1 > /proc/sys/vm/drop_caches;
+ sync; echo 2 > /proc/sys/vm/drop_caches;
+ sync; echo 3 > /proc/sys/vm/drop_caches;
 
